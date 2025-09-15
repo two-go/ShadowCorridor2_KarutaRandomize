@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #777777;
+}
+
+img {
+  max-width: 100%;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+
+
+.container {
+  padding: 0 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+
+}
+
+/* 
+header 
+*/
+
+#header {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+}
+
+/* 
+result 
+*/
+
+.draw-btn-wrapper {
+  text-align: center;
+  margin: 30px;
+}
+
+.draw-btn {
+  font-size: 18px;
+  padding: 15px 60px;
+  display: inline-block;
+  color: #fff;
+  background-color: #a3a3a3;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+
+.draw-result {
+  display: flex;
+  /* align-items: center;
+  vertical-align: center; */
+  padding: 0 20px;
+  border: 4px solid #000;
+}
+.draw-result span {
+  margin: 10px;
+}
+.draw-result p {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.draw-result #no-selection {
+  margin: 0;
+}
+.draw-result img {
+  width: 200px;
+}
+
+/* 
+option 
+*/
+
+#karuta-list {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+#karuta-list label{
+  margin: 10px;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+}
+#karuta-list input {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#karuta-list h2 {
+  padding: 5px 10px;
+  display: block;
+  text-align: center;
+  max-width: 200px;
+  color: #000;
+  border-bottom: 5px solid;
+  border-image-source: linear-gradient(30deg, blue, red);
+  border-image-slice: 1;
+}
+
+.karuta-list-item,
+.karuta-list-itemefect,
+.karuta-list-search,
+.karuta-list-escape,
+.karuta-list-survive {
+  width: 50%;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+
+/* 
+option btns
+*/
+.option-btns {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#reset-btn,
+#select-btn,
+#unselect-btn {
+  font-size: 18px;
+  padding: 15px 60px;
+  margin: 0 20px;
+  display: inline-block;
+  color: #fff;
+  background-color: #a3a3a3;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
