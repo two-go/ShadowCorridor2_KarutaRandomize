@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowCorridor2 カルタ抽選機</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="container" id="header">
+    <div>
+      <h1>ShadowCorridor2 カルタ抽選機</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      
+      <div class="draw-btn-wrapper">
+        <button type="button" id="draw" class="draw-btn">抽選する</button>
+      </div>
+      <div class="draw-result">
+        <span>
+          <p id="result1"></p>
+          <img id="image1">
+        </span>
+        <span>
+          <p id="result2"></p>
+          <img id="image2">
+        </span>
+        <span>
+          <p id="result3"></p>
+          <img id="image3">
+        </span>
+        <span>
+          <p id="result4"></p>
+          <img id="image4">
+        </span>
+        <span>
+          <p id="result5"></p>
+          <img id="image5">
+        </span>
+      </div>
+    </section>
+    
+    <section>
+      <div id="karuta-list">
+        <div class="karuta-list-item">
+          <h2>アイテム</h2>
+          <label><input type="checkbox" class="checkbox light" checked value="探検セット">探検セット</label>
+          <label><input type="checkbox" class="checkbox" checked value="不思議な鍵">不思議な鍵</label>
+          <label><input type="checkbox" class="checkbox" checked value="お弁当">お弁当</label>
+          <label><input type="checkbox" class="checkbox" checked value="結界札">結界札</label>
+          <label><input type="checkbox" class="checkbox" checked value="二十六年式拳銃">二十六年式拳銃</label>
+          <label><input type="checkbox" class="checkbox" checked value="青銅の手鏡">青銅の手鏡</label>
+          <label><input type="checkbox" class="checkbox" checked value="星の砂時計">星の砂時計</label>
+          <label><input type="checkbox" class="checkbox" checked value="千里丸">千里丸</label>
+          <label><input type="checkbox" class="checkbox" checked value="火垂屋チケット">火垂屋チケット</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="飛燕草">飛燕草</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="幸運コケシ">幸運コケシ</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="トカゲのしっぽ">トカゲのしっぽ</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="防虫香">防虫香</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="幽かな夜の止まり木">幽かな夜の止まり木</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="闇色の羽">闇色の羽</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="清浄の四葩">清浄の四葩</label>
+          <label><input type="checkbox" class="checkbox light" checked value="輝く蝶のランタン">輝く蝶のランタン</label>
+          <label><input type="checkbox" class="checkbox light" checked value="二つ穴の蝋燭">二つ穴の蝋燭</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="恋の食パン">恋の食パン</label>
+          <label><input type="checkbox" class="checkbox passive cheat" value="畜生サンダル">畜生サンダル</label>
+          <label><input type="checkbox" class="checkbox passive" checked value="ヒバナのお守り">ヒバナのお守り</label>
+          <label><input type="checkbox" class="checkbox" checked value="咲雷の矛">咲雷の矛</label>
+          <label><input type="checkbox" class="checkbox" checked value="アーチ">アーチ</label>
+        </div>
+        
+        <div class="karuta-list-itemefect">
+          <h2>アイテム効果</h2>
+          <label><input type="checkbox" class="checkbox" checked value="大きなカバン">大きなカバン</label>
+          <label><input type="checkbox" class="checkbox" checked value="二輪挿し">二輪挿し</label>
+          <label><input type="checkbox" class="checkbox" checked value="収納上手">収納上手</label>
+          <label><input type="checkbox" class="checkbox" checked value="内出の小槌">内出の小槌</label>
+          <label><input type="checkbox" class="checkbox" checked value="高品質">高品質</label>
+          <label><input type="checkbox" class="checkbox" checked value="パッシブフリーク">パッシブフリーク</label>
+          <label><input type="checkbox" class="checkbox" checked value="退魔の響き">退魔の響き</label>
+          <label><input type="checkbox" class="checkbox" checked value="まごころおにぎり">まごころおにぎり</label>
+          <label><input type="checkbox" class="checkbox" checked value="エネルギー放射">エネルギー放射</label>
+          <label><input type="checkbox" class="checkbox" checked value="近代化バッテリー">近代化バッテリー</label>
+          <label><input type="checkbox" class="checkbox" checked value="メンテナンス">メンテナンス</label>
+          <label><input type="checkbox" class="checkbox" checked value="治癒結界術">治癒結界術</label>
+          <label><input type="checkbox" class="checkbox" checked value="暗黒物質">暗黒物質</label>
+          <label><input type="checkbox" class="checkbox" checked value="鏡研ぎ">鏡研ぎ</label>
+          <label><input type="checkbox" class="checkbox" checked value="観察眼">観察眼</label>
+          <label><input type="checkbox" class="checkbox" checked value="再凝結">再凝結</label>
+          <label><input type="checkbox" class="checkbox" checked value="高速転移">高速転移</label>
+          <label><input type="checkbox" class="checkbox" checked value="穴ひとつ">穴ひとつ</label>
+          <label><input type="checkbox" class="checkbox cheat" value="四次元巾着">四次元巾着</label>
+          <label><input type="checkbox" class="checkbox" checked value="コンパス改">コンパス改(DLC)</label>
+        </div>
+        
+        <div class="karuta-list-search">
+          <h2>探索</h2>
+          <label><input type="checkbox" class="checkbox" checked value="異界の地図">異界の地図</label>
+          <label><input type="checkbox" class="checkbox" checked value="歩行術">歩行術</label>
+          <label><input type="checkbox" class="checkbox" checked value="運足の極意">運足の極意</label>
+          <label><input type="checkbox" class="checkbox" checked value="力ずく">力ずく</label>
+          <label><input type="checkbox" class="checkbox" checked value="魂魄抽出">魂魄抽出</label>
+          <label><input type="checkbox" class="checkbox" checked value="霊媒体質">霊媒体質</label>
+          <label><input type="checkbox" class="checkbox" checked value="賄賂">賄賂</label>
+          <label><input type="checkbox" class="checkbox" checked value="古書収集家">古書収集家</label>
+          <label><input type="checkbox" class="checkbox" checked value="カフェイン中毒">カフェイン中毒</label>
+          <label><input type="checkbox" class="checkbox" checked value="カルタケース">カルタケース</label>
+          <label><input type="checkbox" class="checkbox seal-seal" checked value="封じ封じ">封じ封じ</label>
+          <label><input type="checkbox" class="checkbox" checked value="人形呼び">人形呼び</label>
+          <label><input type="checkbox" class="checkbox" checked value="火垂屋の優待券">火垂屋の優待券</label>
+          <label><input type="checkbox" class="checkbox" checked value="異界の友">異界の友</label>
+          <label><input type="checkbox" class="checkbox cheat" value="ヒゲダンディ">ヒゲダンディ</label>
+          <label><input type="checkbox" class="checkbox" checked value="死屍累々">死屍累々(DLC)</label>
+          <label><input type="checkbox" class="checkbox" value="シャッフル">シャッフル(DLC)</label>
+          <label><input type="checkbox" class="checkbox" checked value="祈晴">祈晴(DLC)</label>
+          <label><input type="checkbox" class="checkbox" value="脳内オンステージ">脳内オンステージ(DLC)</label>
+        </div>
+        
+        <div class="karuta-list-escape">
+          <h2>逃走</h2>
+          <label><input type="checkbox" class="checkbox" checked value="基礎持久力">基礎持久力</label>
+          <label><input type="checkbox" class="checkbox" checked value="アドレナリン">アドレナリン</label>
+          <label><input type="checkbox" class="checkbox" checked value="ランナーズハイ">ランナーズハイ</label>
+          <label><input type="checkbox" class="checkbox" checked value="無鉄砲">無鉄砲</label>
+          <label><input type="checkbox" class="checkbox" checked value="自動扉">自動扉</label>
+          <label><input type="checkbox" class="checkbox" checked value="頑丈な扉">頑丈な扉</label>
+          <label><input type="checkbox" class="checkbox" checked value="心眼">心眼</label>
+          <label><input type="checkbox" class="checkbox" checked value="安息の地">安息の地</label>
+          <label><input type="checkbox" class="checkbox" checked value="おいしいご褒美">おいしいご褒美</label>
+          <label><input type="checkbox" class="checkbox" checked value="タキサイキア現象">タキサイキア現象</label>
+          <label><input type="checkbox" class="checkbox cheat" value="韋駄天">韋駄天</label>
+          <label><input type="checkbox" class="checkbox" checked value="異界保険">異界保険(DLC)</label>
+        </div>
+        
+        <div class="karuta-list-survive">
+          <h2>生存</h2>
+          <label><input type="checkbox" class="checkbox" checked value="基礎体力">基礎体力</label>
+          <label><input type="checkbox" class="checkbox" checked value="勾玉結界">勾玉結界</label>
+          <label><input type="checkbox" class="checkbox" checked value="厄払い">厄払い</label>
+          <label><input type="checkbox" class="checkbox" checked value="希望の灯火">希望の灯火</label>
+          <label><input type="checkbox" class="checkbox" checked value="血の還元">血の還元</label>
+          <label><input type="checkbox" class="checkbox" checked value="腹ペコの嗅覚">腹ペコの嗅覚</label>
+          <label><input type="checkbox" class="checkbox" checked value="忍者">忍者</label>
+          <label><input type="checkbox" class="checkbox" checked value="メンタルケア">メンタルケア</label>
+          <label><input type="checkbox" class="checkbox" checked value="切り札">切り札</label>
+          <label><input type="checkbox" class="checkbox" checked value="魂の絆">魂の絆</label>
+          <label><input type="checkbox" class="checkbox" checked value="天照">天照</label>
+          <label><input type="checkbox" class="checkbox cheat" value="肉体言語">肉体言語</label>
+          <label><input type="checkbox" class="checkbox cheat" value="烙印の覚醒">烙印の覚醒</label>
+          <label><input type="checkbox" class="checkbox cheat" value="修羅の足枷">修羅の足枷</label>
+          <label><input type="checkbox" class="checkbox" checked value="黄泉の贈物">黄泉の贈物(DLC)</label>
+          <label><input type="checkbox" class="checkbox" checked value="健康体">健康体(DLC)</label>
+          <label><input type="checkbox" class="checkbox" checked value="残り香">残り香(DLC)</label>
+          <label><input type="checkbox" class="checkbox" checked value="焔狩り">焔狩り(DLC)</label>
+        </div>
+      </div>
+
+      <div class="option-btns">
+          <!-- <button type="button" id="reset-btn">リセット</button> -->
+          <button type="button" id="select-btn">全選択</button>
+          <button type="button" id="unselect-btn">全解除</button>
+      </div>
+      
+    </section>
+  </main>
+
+
+
+
+  <script src="./index.js"></script>
+</body>
+</html>
