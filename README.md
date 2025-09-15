@@ -1,0 +1,1 @@
+# ShadowCorridor2_KarutaRandomize
